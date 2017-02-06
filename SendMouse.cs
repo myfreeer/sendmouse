@@ -1,4 +1,4 @@
-namespace SendMouse
+﻿namespace SendMouse
 {
     using System;
     using System.Runtime.InteropServices;
@@ -31,6 +31,7 @@ namespace SendMouse
                 Console.WriteLine(Control.MousePosition.X);
                 Console.Write("y=");
                 Console.WriteLine(Control.MousePosition.Y);
+                Console.WriteLine("SendMouse.exe" + " " + Control.MousePosition.X + " " + Control.MousePosition.Y);
                 Environment.Exit(-1);
             }
             Console.Write("x=");
@@ -48,3 +49,4 @@ namespace SendMouse
         private static extern bool SetCursorPos(int X, int Y);
     }
 }
+
